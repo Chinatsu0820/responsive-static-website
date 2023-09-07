@@ -1,5 +1,5 @@
 # responsive-static-website
-# This is a imagnary coffee company website.
+# This is an imagnary coffee company website.
 
 #This is not only one of the assignments but also my portfolio.
 
