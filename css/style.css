@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Font link for header */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,5 +12,306 @@ html {
 }
 
 body {
-    font-size: 1rem;
+    font-size: 1.6rem;
+}
+
+
+/*------------- HEADER --------------*/
+
+header {
+    width: 100vw;
+}
+
+/* nav menu */
+nav {
+    background-color: brown;
+}
+
+input {
+    display: none;
+}
+
+.hamberger-button {
+    text-align: right;
+}
+
+.menu-hamburger {
+    margin: 2rem;
+}
+
+.header-menu-mobile {
+    position: absolute;
+    z-index: 1;
+    /* 一番上のレイヤーにする */
+    right: -100%;
+    background: rgba(255, 255, 255, 0.735);
+    transition: .5s;
+    list-style: none;
+    padding: 2rem;
+}
+
+.header-menu-button-m {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3rem;
+    color: black;
+    line-height: 5.5rem;
+    padding: 0.5rem;
+}
+
+.header-menu-button-m:hover {
+    background-color: yellow;
+}
+
+#check:checked~.header-menu-mobile {
+    right: 0;
+}
+
+/* header main */
+.header-main {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+}
+
+.header-main h1 {
+    position: absolute;
+    color: gold;
+    font-size: 5.5rem;
+    font-family: 'Pacifico', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-img {
+    position: absolute;
+    padding: 3%;
+    top: 0;
+    left: 40%;
+    transform: translate(-40%, 0);
+    width: 100%;
+    height: 100%;
+    max-width: 80rem;
+}
+
+.header-menu {
+    display: none;
+}
+
+/* -- for desktop --*/
+@media screen and (min-width: 427px) {
+
+    /* nav menu */
+    .menu-hamburger,
+    .header-menu-mobile {
+        display: none;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    .header-menu li {
+        padding: 1rem;
+        background-color: brown;
+        border-radius: 2rem;
+        margin: 1rem;
+    }
+
+    .header-menu-button {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .header-menu li:hover {
+        background-color: yellow;
+    }
+
+    /* header main */
+    .header-main {
+        height: 45vh;
+
+    }
+
+    .header-main h1 {
+        font-size: 7rem;
+    }
+}
+
+
+/*-------------- MAIN ---------------*/
+
+/* intro for product */
+.intro-products {
+    padding: 2vw;
+    background-color: white;
+}
+
+.intro-products-container {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.intro-product {
+    position: relative;
+    flex: 1;
+}
+
+.intro-product-img {
+    width: 100%;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem #623939);
+}
+
+/*
+.intro-product::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: linear-gradient(  rgb(88, 195, 214), rgb(8, 42, 87) );
+    filter: blur(20px);
+    transform: scale(1.1);
+    mix-blend-mode: color-dodge;
+    width: 100%;
+    height: 100%;
+}
+*/
+
+/* .try-blend-shadow {
+} */
+
+.intro-product-text {
+    position: absolute;
+    width: 100%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.584);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 2rem;
+    opacity: 0;
+}
+
+
+.intro-product:hover .intro-product-text {
+    opacity: 1;
+}
+
+.intro-product-more {
+    text-align: center;
+}
+
+.intro-product-more a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro-product-more a:hover {
+    text-decoration: solid;
+    color: orange;
+}
+
+
+/* intro for the company */
+.intro-company {
+    padding: 10vw;
+    height: 50vh;
+}
+
+.intro-company-position {
+    width: 100%;
+    position: relative;
+}
+
+.intro-company-img {
+    position: absolute;
+    width: 70vw;
+    top: 0;
+    right: 0;
+}
+
+.intro-company-text {
+    position: absolute;
+    text-decoration: none;
+    top: 10vw;
+    left: 0;
+}
+
+/* -- for desktop --*/
+@media screen and (min-width: 427px) {
+
+    /* intro for product */
+    .intro-products {
+        padding: 10vw;
+    }
+
+    .intro-products-container {
+        gap: 10vw;
+        padding: 3rem;
+    }
+
+    .intro-product-text {
+        padding: 10%;
+    }
+
+    /* intro for the company */
+    .intro-company {
+        height: 80vh;
+    }
+
+    .intro-company-text {
+        top: 30vw;
+    }
+}
+
+
+/*------------- FOOTER --------------*/
+
+footer {
+    background-color: brown;
+    padding: 2rem 0.5rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-sns {
+    display: flex;
+}
+
+.footer-img {
+    width: 10vw;
+}
+
+.footer-contact {
+    font-size: 1.3rem;
+}
+
+footer small {
+    align-self: auto;
+}
+
+.footer-copyright {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* -- for desktop --*/
+@media screen and (min-width: 427px) {
+    .footer-img {
+        width: 5vw;
+    }
 }

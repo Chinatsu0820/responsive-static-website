@@ -1,26 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>BeanCrafters</title>
+    <title>Bean Crafters</title>
 </head>
+
 <body>
     <!------------ HEADER ------------>
     <header>
+        <!---- nav menu ---->
+        <nav>
+            <!--- for mobile --->
+            <input type="checkbox" id="check">
+            <div class="hamberger-button">
+                <label for="check" class="menu-hamburger">
+                    <img src="imgs/menu-hamburger.svg" alt="" />
+                </label>
+            </div>
+            <ul class="header-menu-mobile">
+                <li><a class="header-menu-button-m" href="index.html">TOP</a></li>
+                <li><a class="header-menu-button-m" href="">ABOUT US</a></li>
+                <li><a class="header-menu-button-m" href="">PRODUCT</a></li>
+                <li><a class="header-menu-button-m" href="">CONTACT</a></li>
+            </ul>
+
+            <!--- for desktop --->
+            <ul class="header-menu">
+                <li><a class="header-menu-button" href="index.html">TOP</a></li>
+                <li><a class="header-menu-button" href="">ABOUT US</a></li>
+                <li><a class="header-menu-button" href="">PRODUCT</a></li>
+                <li><a class="header-menu-button" href="">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!----- header main ----->
+        <div class="header-main">
+            <h1>Bean Crafters</h1>
+            <img class="header-img" src="imgs/header-coffeebeans.png" alt="">
+        </div>
 
     </header>
 
     <!------------- MAIN ------------->
     <main>
+        <!-- intro for product -->
+        <section class="intro-products">
+
+            <div class="intro-products-container">
+                <div class="intro-product p1">
+                    <img class="intro-product-img" src="imgs/product-coffee.jpg"
+                        alt="This is a picture of a package of our coffee beans.">
+
+                    <p class="intro-product-text">Lorem ipsum dolor sit</p>
+                </div>
+
+                <div class="intro-product p2">
+                    <img class="intro-product-img" src="imgs/product-coffee.jpg"
+                        alt="This is a picture of a package of our coffee beans.">
+
+                    <p class="intro-product-text">Lorem ipsum dolor sit</p>
+                </div>
+
+                <div class="intro-product p3">
+                    <img class="intro-product-img" src="imgs/product-coffee.jpg"
+                        alt="This is a picture of a package of our coffee beans.">
+
+                    <p class="intro-product-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="intro-product-more">
+                <a href="">Check more</a>
+            </div>
+        </section>
+
+        <!-- intro for the company -->
+        <section class="intro-company">
+            <div class="intro-company-position">
+                <img class="intro-company-img" src="imgs/intro-us-image.jpg"
+                    alt="This is an image picture of our product.">
+
+                <div class="intro-company-text">
+                    Welcome to Bean Crafters, where we bring you the finest coffee beans
+                    from around the world, all while keeping our planet in mind.
+                    We're dedicated to sourcing and importing only the highest-quality coffee beans,
+                    grown sustainably and ethically. Our mission is to provide coffee enthusiasts
+                    with a guilt-free, exceptional coffee experience, one cup at a time.
+                    Join us in our commitment to great taste and environmental responsibility.
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <!------------ FOOTER ------------>
     <footer>
+        <div class="footer-container">
+            <div class="footer-sns">
+                <a class="footer-button" href="https://twitter.com">
+                    <img class="footer-img" src="imgs/icons8-twitterx.svg" alt="This is an link icon of TwitterX.">
+                </a>
+                <a class="footer-button" href="https://instagram.com">
+                    <img class="footer-img" src="imgs/icons8-instagram.svg" alt="This is an link icon of Instagram.">
+                </a>
+                <a class="footer-button" href="https://facebook.com">
+                    <img class="footer-img" src="imgs/icons8-facebook.svg" alt="This is an link icon of Facebook.">
+                </a>
+            </div>
 
+            <div class="footer-contact">
+                <div>&#9993; Chinantsu-Coffee@info.jp</div>
+                <div>&#9743; 000-000-0000</div>
+                <div>&#8962; 0000 ABC St, Vancouver,<br> &nbsp; BC V00 0V0 </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <small> <!--small = 免責・警告・著作権などの注釈を表す -->
+                &copy; 2023 Chinatsu inc.
+            </small>
+        </div>
     </footer>
 </body>
+
 </html>
