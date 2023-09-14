@@ -326,6 +326,101 @@ input {
     }
 }
 
+/*------------- PRODUCT MAIN --------------*/
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "area-1"
+    "area-2"
+    "area-3"
+    "area-4"
+    "area-5"
+    "area-6"
+    "area-7";
+    place-content: center;
+    place-items: center;
+}
+.area img{
+    width: 100%;
+}
+
+
+.area.a1 {
+    grid-area: area-1;
+}
+
+.area.a2 {
+    grid-area: area-2;
+}
+
+.area.a3 {
+    grid-area: area-3;
+}
+
+.area.a4 {
+    grid-area: area-4;
+}
+
+.area.a5 {
+    grid-area: area-5;
+}
+
+.area.a6 {
+    grid-area: area-6;
+}
+
+.area.a7 {
+    grid-area: area-7;
+}
+
+.debug {
+    border-color: green;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.area {
+    text-align: center;
+    border-color: orange;
+    border-width: 4px;
+    border-style: dotted;
+    margin: 1rem;
+}
+
+.p-flex {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.p-img {
+    max-width: 80%;
+    border-radius: 2%;
+}
+
+.p-name {
+    font-size: 3rem;
+}
+
+/* -- for desktop --*/
+@media screen and (min-width: 427px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "area-1 area-1 area-1 area-1"
+        ".      area-2 area-2 area-2"
+        "area-3 area-3 area-3 . "
+        ". area-4 area-4 area-4"
+        "area-5 area-5 area-5 . "
+        ". area-6 area-6 area-6"
+        "area-7 area-7 area-7 . ";
+    }
+
+}   
 
 
 /*------------- FOOTER --------------*/
