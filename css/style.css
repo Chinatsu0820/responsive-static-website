@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /* Font link for header */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Font link for product's name */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+/* Font link for the whole pages */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +13,7 @@
 
 html {
     font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -72,7 +77,10 @@ input {
     position: relative;
     width: 100%;
     height: 30vh;
-    background-color: black;
+    background-image: url(../imgs/header-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .header-main h1 {
@@ -140,7 +148,7 @@ input {
     /* header main */
     .header-main {
         height: 45vh;
-
+        background-position: center;
     }
 
     .header-main h1 {
@@ -404,6 +412,7 @@ input {
 
 .p-name {
     font-size: 3rem;
+    font-family: 'Croissant One', cursive;
 }
 
 /* -- for desktop --*/
@@ -421,6 +430,70 @@ input {
     }
 
 }   
+
+
+
+/*------------ CONTACT MAIN --------------*/
+
+.contact-container {
+    background-color: #8f7062;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-kinds {
+    margin: 2rem;
+}
+
+.contact-kinds select {
+    padding: 1rem;
+    margin:1rem;
+}
+
+.contact-reply {
+    margin: 2rem;
+}
+
+#yes, #no {
+    display: inline;
+    margin: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.contact-container h2 {
+    margin: 2rem;
+}
+
+.c-form-input {
+    width: 70%;
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+    display: inline-block;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=submit] {
+    display: block;
+    background-color: #351b12;
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 1rem auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: #dda420;
+}
+
+#comment {
+    height: 20vh;
+}
 
 
 /*------------- FOOTER --------------*/
@@ -442,6 +515,8 @@ footer {
 
 .footer-img {
     width: 10vw;
+    max-width: 3rem;
+    margin: 1rem;
 }
 
 .footer-contact {
