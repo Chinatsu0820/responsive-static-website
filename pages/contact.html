@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>About Us</title>
+    <title>Contact</title>
 </head>
 
 <body>
@@ -39,38 +39,46 @@
 
         <!----- header main ----->
         <div class="header-main">
-            <h1>About Us</h1>
+            <h1>Contact</h1>
             <img class="header-img" src="../imgs/header-coffeebeans.png" alt="">
         </div>
     </header>
 
     <!------------- MAIN ------------->
-    <main>
-        <div class="about-story s1">
-            <img class="about-imgs i1" src="../imgs/about-cherry.jpg" alt="This is a picture of coffee cherries.">
-            <p class="about-story-text">
-                Bean Crafters was founded in the year 2000 by a group of coffee aficionados
-                with a unique vision. Our mission was clear: to source only the finest coffee
-                beans directly from producers worldwide. We sent experts to verify the quality
-                of the beans and the sustainability of production methods. Our dedication
-                extended to the import process, where we prioritized freshness.</p>
-        </div>
+    <div class="contact-container">
+        <h2>CONTACT FORM</h2>
 
-        <div class="about-story s2">
-            <img class="about-imgs i2" src="../imgs/about-roast.jpg" alt="This is a picture roasting coffee beans.">
-            <p class="about-story-text">
-                In Canada, we roasted our beans with a blend of artisanal expertise and modern technology,
-                ensuring perfection in every batch. Our commitment to quality was mirrored in our
-                eco-friendly packaging, designed to preserve freshness.</p>
-        </div>
+        <form>
+            <!-- select box -->
+            <div class="contact-kinds">
+                <p>Your message is about...</p>
+                <select name="kinds">
+                    <option value="products">Products</option>
+                    <option value="us">Us</option>
+                    <option value="business">Business</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
 
-        <div class="about-story s3">
-            <img class="about-imgs i3" src="../imgs/about-package.jpg" alt="This is a picture of our coffee packages.">
-            <p class="about-story-text">
-                Two decades later, Bean Crafters remains devoted to delivering the ultimate coffee experience,
-                guided by a passion for exceptional taste and ethical practices.</p>
-        </div>
-    </main>
+            <!-- radio button -->
+            <div class="contact-reply">
+                <p>Do you need a reply ?</p>
+                <input id="yes" type="radio" name="reply" value="yes"><label for="yes">Yes</label>
+                <input id="no" type="radio" name="reply" value="no"><label for="no">No</label>
+            </div>
+
+            <!-- write form -->
+            <input class="c-form-input" name="name" type="text" placeholder="Name"><br>
+            <input class="c-form-input" name="email" type="email" placeholder="Email"><br>
+            <input class="c-form-input" id="num" name="phone" type="number" placeholder="Phone"><br>
+            <textarea class="c-form-input" id="comment" name="comment" placeholder="Message"></textarea>
+
+            <!-- submit button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
 
     <!------------ FOOTER ------------>
     <footer>
@@ -100,6 +108,7 @@
             </small>
         </div>
     </footer>
+
 </body>
 
 </html>
