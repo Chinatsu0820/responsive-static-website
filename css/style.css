@@ -443,7 +443,54 @@ input {
     }
 
     .p-name {
-        font-size: 5rem;
+        font-size: 5vw max(3rem);
+    }
+
+    .p-img, .p-flex {
+        max-width: 50%;
+    }
+
+    .p-img.left,
+    .p-flex.left {
+        animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .p-img.right,
+    .p-flex.right {
+        animation: slideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-180px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+        40%,
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(180px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+
+        40%,
+        100% {
+            opacity: 1;
+        }
     }
 
 
