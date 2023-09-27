@@ -387,6 +387,10 @@ nav {
 }
 
 /*------------- PRODUCT MAIN --------------*/
+.product-main {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
 
 .product-container {
     display: grid;
@@ -484,13 +488,13 @@ nav {
         max-width: 50%;
     }
 
-    .p-img.left,
-    .p-flex.left {
+    .p-img.left.is-animated,
+    .p-flex.left.is-animated {
         animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     }
 
-    .p-img.right,
-    .p-flex.right {
+    .p-img.right.is-animated,
+    .p-flex.right.is-animated {
         animation: slideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     }
 
