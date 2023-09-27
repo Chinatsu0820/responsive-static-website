@@ -71,14 +71,15 @@ nav {
     /* 一番上のレイヤーにする */
     right: -100%;
     background: rgba(255, 255, 255, 0.735);
-    transition: .5s;
     list-style: none;
     padding: 2rem;
     top:3rem;
+    transition: 1s;
 }
 
 .header-menu-mobile.active {
     right: 0;
+    transition: 1s;
 }
 
 .header-menu-button-m {
@@ -548,6 +549,35 @@ nav {
     text-align: center;
 }
 
+.contact-container h2 {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.contact-description {
+    margin: 3rem;
+    padding: 2rem;
+    background-color: rgb(49, 45, 45);
+    border: 0.2rem solid gray;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-description-title {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 2rem;
+}
+
+.contact-description img {
+    max-width: 100%;
+}
+
+.contact-description-text {
+    height: 20vh;
+    overflow-y: scroll;
+}
+
 .contact-kinds {
     margin: 2rem;
 }
@@ -566,12 +596,6 @@ nav {
     display: inline;
     margin: 1rem;
     font-family: 'Open Sans', sans-serif;
-}
-
-
-.contact-container h2 {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
 }
 
 .c-form-input {
@@ -605,6 +629,24 @@ input[type=submit]:hover {
     height: 20vh;
 }
 
+
+/* -- for desktop --*/
+@media screen and (min-width: 427px) {
+    .contact-description {
+        max-width: 50rem;
+        margin: 5rem auto;
+    }
+
+    .contact-description img {
+        float: right;
+    }
+
+    .contact-description-text {
+    overflow-y:visible;
+    text-align: left;
+    height: auto;
+    }
+}
 
 /*------------- FOOTER --------------*/
 
