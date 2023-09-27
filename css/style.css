@@ -32,15 +32,34 @@ header {
 /* nav menu */
 nav {
     background-color: rgb(114, 68, 50);
+    position: relative;
+    width: 100%;
+    height: 3rem;
 }
 
-input {
-    display: none;
+.hamburger-button img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.hamberger-button {
-    text-align: right;
+.menu-open {
+    opacity: 1;
 }
+
+.menu-open.active {
+    opacity: 0;
+}
+
+.menu-close {
+    opacity: 0;
+}
+
+.menu-close.active {
+    opacity: 1;
+}
+
 
 .menu-hamburger {
     margin: 2rem;
@@ -55,6 +74,11 @@ input {
     transition: .5s;
     list-style: none;
     padding: 2rem;
+    top:3rem;
+}
+
+.header-menu-mobile.active {
+    right: 0;
 }
 
 .header-menu-button-m {
@@ -70,11 +94,10 @@ input {
     background-color: yellow;
 }
 
-#check:checked~.header-menu-mobile {
-    right: 0;
-}
 
 /* header main */
+
+
 .header-main {
     position: relative;
     width: 100%;
@@ -116,6 +139,11 @@ input {
 @media screen and (min-width: 427px) {
 
     /* nav menu */
+
+    nav {
+        height: auto;
+    }
+
     .menu-hamburger,
     .header-menu-mobile {
         display: none;
@@ -330,7 +358,12 @@ input {
 
 .about-story-text {
     margin: 2rem;
-    font-size: 1.5vw;
+    font-size: 5vw;
+}
+
+.about-main {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 }
 
 
@@ -446,7 +479,8 @@ input {
         font-size: 5vw max(3rem);
     }
 
-    .p-img, .p-flex {
+    .p-img,
+    .p-flex {
         max-width: 50%;
     }
 
