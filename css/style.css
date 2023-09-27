@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color1: rgb(229, 227, 227);
+}
+
 html {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
@@ -19,8 +23,9 @@ html {
 body {
     font-size: 1.6rem;
     background-color: black;
-    color: white;
+    color: var(--color1);
 }
+
 
 
 /*------------- HEADER --------------*/
@@ -73,7 +78,7 @@ nav {
     background: rgba(255, 255, 255, 0.735);
     list-style: none;
     padding: 2rem;
-    top:3rem;
+    top: 3rem;
     transition: 1s;
 }
 
@@ -230,8 +235,39 @@ nav {
     opacity: 1;
 }
 
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-1rem);
+    }
+
+    60% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+
 .intro-product-more {
     text-align: center;
+    
+    /* animation */
+    animation-delay: 1s;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; /* repeat forever */
+}
+
+.intro-product-more:hover {
+    animation-play-state: paused;
 }
 
 .intro-product-more a {
@@ -240,8 +276,8 @@ nav {
     font-weight: bold;
     color: white;
     border: solid 0.2rem #dda420;
-    padding: 1rem;
     border-radius: 1rem;
+    padding: 0.2rem;
 }
 
 .intro-product-more a:hover {
@@ -463,6 +499,11 @@ nav {
     font-family: 'Croissant One', cursive;
 }
 
+.area.a7 .p-text::before {
+    content: "NEW!";
+    color: red;
+}
+
 /* -- for desktop --*/
 @media screen and (min-width: 427px) {
     .product-container {
@@ -488,22 +529,26 @@ nav {
     }
 
     .p-img.left.is-animated,
-    .p-flex.left.is-animated{
-        animation-name: slideInLeft; /* key-frame animation name */
-        animation-duration: 1s; /* how long the animation is */
-        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* animation-timing-function */
-        animation-fill-mode: forwards; /* keep the style when the animatin finishes */
-      }
-      
+    .p-flex.left.is-animated {
+        animation-name: slideInLeft;
+        /* key-frame animation name */
+        animation-duration: 1s;
+        /* how long the animation is */
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        /* animation-timing-function */
+        animation-fill-mode: forwards;
+        /* keep the style when the animatin finishes */
+    }
+
 
     .p-img.right.is-animated,
-    .p-flex.right.is-animated{
+    .p-flex.right.is-animated {
         animation-name: slideInRight;
         animation-duration: 1s;
         animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
         animation-fill-mode: forwards;
-      }
-      
+    }
+
 
     @keyframes slideInLeft {
         0% {
@@ -642,9 +687,9 @@ input[type=submit]:hover {
     }
 
     .contact-description-text {
-    overflow-y:visible;
-    text-align: left;
-    height: auto;
+        overflow-y: visible;
+        text-align: left;
+        height: auto;
     }
 }
 
