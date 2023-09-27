@@ -489,15 +489,22 @@ nav {
     }
 
     .p-img.left.is-animated,
-    .p-flex.left.is-animated {
-        animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    }
+    .p-flex.left.is-animated{
+        animation-name: slideInLeft; /* key-frame animation name */
+        animation-duration: 1s; /* how long the animation is */
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* animation-timing-function */
+        animation-fill-mode: forwards; /* keep the style when the animatin finishes */
+      }
+      
 
     .p-img.right.is-animated,
-    .p-flex.right.is-animated {
-        animation: slideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    }
-
+    .p-flex.right.is-animated{
+        animation-name: slideInRight;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        animation-fill-mode: forwards;
+      }
+      
 
     @keyframes slideInLeft {
         0% {
