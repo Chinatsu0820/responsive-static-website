@@ -96,8 +96,6 @@ nav {
 
 
 /* header main */
-
-
 .header-main {
     position: relative;
     width: 100%;
@@ -139,7 +137,6 @@ nav {
 @media screen and (min-width: 427px) {
 
     /* nav menu */
-
     nav {
         height: auto;
     }
@@ -383,6 +380,7 @@ nav {
 
     .about-story-text {
         margin: 4rem;
+        font-size: 2rem;
     }
 }
 
